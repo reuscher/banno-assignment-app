@@ -1,15 +1,11 @@
 package presentation;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import components.*;
-import java.io.File;
-import javax.imageio.ImageIO;
 
 /** 
  * The WebScraperFrame class contains a Frame provides a UI
@@ -143,7 +139,7 @@ public class ApplicationFrame extends JFrame {
 	        // Adding panels to information field
 			infoField.add(urlPanel, BorderLayout.NORTH);
 			infoField.add(infoPanel, BorderLayout.CENTER);
-		}
+			}
 		
 		/**
 		 * Build information panel
@@ -175,5 +171,5 @@ public class ApplicationFrame extends JFrame {
 			
 			infoField1.add(urlPanel1, BorderLayout.NORTH);
 			infoField1.add(infoPanel1, BorderLayout.SOUTH);		
-		}
-	}
+			}
+	}	

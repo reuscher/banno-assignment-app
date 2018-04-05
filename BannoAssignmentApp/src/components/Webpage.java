@@ -57,51 +57,51 @@ public class Webpage {
 		char3 = null;
 		twitterHandle = "";
 		this.extractData();
-	}
+		}
 			
 	//-------------------------------------------------------
 	// Class Methods
 	//-------------------------------------------------------
 	public String getUrl() {
 		return url;
-	}
+		}
 	public int getProductCount() {
 		return productsOffered;
-	}
+		}
 	public int getStringCount() {
 		return stringCount;
-	}
+		}
 	public int getPngCount() {
 		return pngCount;
-	}
+		}
 	public Character getChar1() {
 		return char1;
-	}
+		}
 	public Character getChar2() {
 		return char2;
-	}
+		}
 	public Character getChar3() {
 		return char3;
-	}
+		}
 	public int getChar1Count() {
 		return char1Count;
-	}
+		}
 	public int getChar2Count() {
 		return char2Count;
-	}
+		}
 	public int getChar3Count() {
 		return char3Count;
-	}
+		}
 	public String getTwitterHandle() {
 		return twitterHandle;
-	}
+		}
 	
 	private void extractData() throws Exception {
 		String line;
 		BufferedReader reader = new BufferedReader(new StringReader(sourceStr));
 
 		while((line = reader.readLine()) != null) {
-			String findPng = ".png";
+			String findPng = "\\.png";
 			pngCount += (line.split(findPng, -1).length-1);
 		
 			String findStr = "financial institutions";
@@ -115,8 +115,8 @@ public class Webpage {
 				String[] parts = line.split("=");
 				String aString = parts[parts.length-1];
 				twitterHandle = aString.replaceAll("\"", "").replace(">","");
+				}
 			}
-		}
 		
 		// Regular expression to clean string for map
 		sourceStr = sourceStr.replaceAll("[^a-zA-Z0-9_-]", "");
@@ -138,15 +138,18 @@ public class Webpage {
 		// Iterate over map to grab three most frequent entries
  		for (Entry<Character, Integer> entry : charCounter.entrySet()) {
 			if (topEntry== null || entry.getValue().compareTo(topEntry.getValue()) > 0) {
+				thirdEntry = secondEntry;
+				secondEntry = topEntry;
 				topEntry = entry;
-			}
+				}
 			else if (secondEntry == null || entry.getValue().compareTo(secondEntry.getValue()) > 0) {
+				thirdEntry = secondEntry;
 				secondEntry = entry;
-			}
+				}
 			else if (thirdEntry == null || entry.getValue().compareTo(thirdEntry.getValue()) > 0) {
 				thirdEntry = entry;
-			}
- 		}
+				}
+ 			}
  		
  		// Set values
  		char1 = topEntry.getKey();
@@ -155,5 +158,5 @@ public class Webpage {
  		char2Count = secondEntry.getValue();
  		char3 = thirdEntry.getKey();
  		char3Count = thirdEntry.getValue();
+		}
 	}
-}

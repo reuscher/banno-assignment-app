@@ -6,7 +6,7 @@ import java.io.*;
 /**
  * Uses an inputStreamReader to read HTML from desired URL
  * 
- * @author reuscher
+ * @author Micah Reuscher
  *
  */
 public class UrlReader {
@@ -36,13 +36,13 @@ public class UrlReader {
 		while ((line = reader.readLine()) != null) {
 			sb.append(line);
 			sb.append(System.lineSeparator());
-		}
+			}
 		urlSource = sb.toString();
 		reader.close();
-	}
+		}
 	
 	public String getSource() {
 		return urlSource;
-	}
+		}
 
-}
+	}

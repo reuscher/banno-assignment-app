@@ -16,5 +16,5 @@ public class BannoAssignmentApp {
 	public static void main(String[] args) throws Exception {
 		ApplicationFrame webScraper = new ApplicationFrame();
 		webScraper.setVisible(true);
+		}
 	}
-}
