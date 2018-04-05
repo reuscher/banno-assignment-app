@@ -1,7 +1,6 @@
 \# banno-assignment-app
 ### This is a simple application to extract specific details from Banno's Website.<br /> 
-●The top 3 occuring alphanumeric characters contained in the HTML, and how <br />
-many times each occurs.
+●The top 3 occuring alphanumeric characters contained in the HTML, and how many times each occurs. <br />
 ● The number of .png images in the HTML.<br />
 ● BannoJHA’s Twitter handle: this should work if the Twitter name were to change.<br />
 ● The number of times the term “financial institution” occurs in text.<br />
