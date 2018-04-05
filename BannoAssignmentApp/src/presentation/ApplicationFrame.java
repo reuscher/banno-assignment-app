@@ -43,9 +43,9 @@ public class ApplicationFrame extends JFrame {
      		
 		// Initialize frame properties
 		this.setLayout(new GridLayout(0,1));
-		this.setLayout(new BorderLayout());
+		//this.setLayout(new BorderLayout());
 		this.getContentPane().setBackground(Color.GRAY);
-		this.setSize(350,200);
+		this.setSize(350,300);
 		this.setTitle( "HTML Data " );
 		this.setResizable(false);
 		
@@ -54,8 +54,8 @@ public class ApplicationFrame extends JFrame {
 		this.createInfoField1();
 		
 		// Build information field panels
-		this.add(infoField,BorderLayout.NORTH);
-		this.add(infoField1,BorderLayout.SOUTH);
+		this.add(infoField);
+		this.add(infoField1);
 		}
 		
 		//---------------------------------------------
@@ -146,30 +146,34 @@ public class ApplicationFrame extends JFrame {
 		 * @throws Exception
 		 */
 		private void createInfoField1 () throws Exception {
+			
+			// Initialize Features page
 			Webpage webpage1 = new Webpage("https://banno.com/features/");
 			
+			// Initialize field to contain Feature page information
 			infoField1 = new JPanel();
-			infoField1.setLayout(new BorderLayout());
+			infoField1.setLayout(new FlowLayout());
 			infoField1.setOpaque(false);
 			
+			// Panel to show source
 			urlPanel1 = new JPanel();
 			urlPanel1.setLayout(new FlowLayout(FlowLayout.CENTER));
 			urlPanel1.setOpaque(false);
 			JLabel url1 = new JLabel("Source: "+webpage1.getUrl());
 			urlPanel1.add(url1);
 			
+			// Panel to show information
 			infoPanel1 = new JPanel();
-			infoPanel1.setLayout(new GridLayout(0,2,5,5));
+			infoPanel1.setLayout(new FlowLayout());
 			infoPanel1.setOpaque(false);
-			
-			//JLabel productCount = new JLabel("Features/Products Offered: "+webpage1.getProductCount());
 			JLabel products = new JLabel(" Products/Features: '");
 	        infoPanel1.add(products);
-	        
 	        JLabel productCount = new JLabel("Total: "+webpage1.getProductCount());
 			infoPanel1.add(productCount);
 			
-			infoField1.add(urlPanel1, BorderLayout.NORTH);
-			infoField1.add(infoPanel1, BorderLayout.SOUTH);		
+			// Add both Panels to Field
+			infoField1.add(urlPanel1);
+			infoField1.add(infoPanel1);
 			}
 	}	
+

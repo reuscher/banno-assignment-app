@@ -2,10 +2,10 @@
 ### This is a simple application to extract specific details from Banno's Website.<br /> 
 ●The top 3 occuring alphanumeric characters contained in the HTML, and how <br />
 many times each occurs.
-<br />● The number of .png images in the HTML.
-<br />● BannoJHA’s Twitter handle: this should work if the Twitter name were to change.
-<br />● The number of times the term “financial institution” occurs in text.
-<br />● A count of the number of products offered from https://banno.com/features/
+● The number of .png images in the HTML.<br />
+● BannoJHA’s Twitter handle: this should work if the Twitter name were to change.<br />
+● The number of times the term “financial institution” occurs in text.<br />
+● A count of the number of products offered from https://banno.com/features/<br />
 
 ## How to run through terminal - Linux:
 1. git clone https://github.com/reuscher/banno-assignment-app
