@@ -1,4 +1,4 @@
-# banno-assignment-app
+\# banno-assignment-app
 ### This is a simple application to extract specific details from Banno's Website.<br /> 
 ●The top 3 occuring alphanumeric characters contained in the HTML, and how <br />
 many times each occurs.
@@ -16,7 +16,7 @@ many times each occurs.
 ## How to run through 
 1. git clone https://github.com/reuscher/banno-assignment-app
 2. cd banno-assignment-app/BannoAssignmentApp/src
-3. SET PATH="C:\Program Files\Java\jdk+"your-version";%PATH%
+3. SET PATH="C:\Program Files\Java\jdk+'your-version'\bin";%PATH%
 4. javac presentation/BannoAssignmentApp.java
 5. java presentation.BannoAssignmentApp
   
