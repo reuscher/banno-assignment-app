@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 import components.*;
 
 /** 
- * The WebScraperFrame class contains a Frame provides a UI
+ * The ApplicationFrame class contains a Frame provides a UI
  * 
  * @author Micah Reuscher
  */
@@ -36,7 +36,7 @@ public class ApplicationFrame extends JFrame {
     // Default Constructor
     //--------------------------------------------------------------------------  
 	/**
-	 * Build WebScraperFrame
+	 * Build ApplicationFrame
 	 * @throws Exception
 	 */
 	public ApplicationFrame() throws Exception {		
