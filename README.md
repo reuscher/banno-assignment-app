@@ -1,4 +1,4 @@
-\# banno-assignment-app
+# banno-assignment-app
 ### This is a simple application to extract specific details from Banno's Website.<br /> 
 ●The top 3 occuring alphanumeric characters contained in the HTML, and how many times each occurs. <br />
 ● The number of .png images in the HTML.<br />
